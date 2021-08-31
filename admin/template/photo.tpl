@@ -5,10 +5,12 @@
 
 <form action="{$F_ACTION}" method="post" id="catModify">
   <fieldset>
-    <legend>{'My awesome photo tab'|translate}</legend>
+    <legend>{'Detect faces within this photo.'|translate}</legend>
 
     <p>
-      <img src="{$TN_SRC}" alt="{'Thumbnail'|translate}" class="Thumbnail">
+      <div align="center"> 
+        <img src="{$SRC_IMG}" alt="{'Image Source'|translate}">
+      </div>
     </p>
 
     <p>

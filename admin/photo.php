@@ -43,7 +43,7 @@ $template->assign(array(
   'F_ACTION' => $self_url,
   'faceDetector' => $conf['faceDetector'],
   'TITLE' => render_element_name($picture),
-  'TN_SRC' => DerivativeImage::thumb_url($picture),
+  'SRC_IMG' => DerivativeImage::url(IMG_LARGE, $picture),
 ));
 
 $template->set_filename('faceDetector_content', realpath(FACEDETECTOR_PATH . 'admin/template/photo.tpl'));
