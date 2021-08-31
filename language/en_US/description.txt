@@ -1,1 +1,1 @@
-This is not a plugin. It's a skeleton for future plugins.
+This plugin aims to detect faces on an image.
