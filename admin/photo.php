@@ -34,7 +34,7 @@ $picture = pwg_db_fetch_assoc(pwg_query($query));
 # DO SOME STUFF HERE... or not !
 if(isset($_POST['detect_faces']))
 {
-  unset($_POST['detect_faces'])
+  unset($_POST['detect_faces']);
 }
 
 /* Template */
