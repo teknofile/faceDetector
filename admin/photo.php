@@ -12,8 +12,8 @@ check_status(ACCESS_ADMINISTRATOR);
 
 check_input_parameter('image_id', $_GET, false, PATTERN_ID);
 
-$admin_photo_base_url = get_root_url().'admin.php?page=photo-'.$_GET['image_id'];
-$self_url = FACEDETECTOR_ADMIN.'-photo&amp;image_id='.$_GET['image_id'];
+$admin_photo_base_url = get_root_url()  .'admin.php?page=photo-'.$_GET['image_id'];
+$self_url = FACEDETECTOR_ADMIN . '-photo&amp;image_id=' . $_GET['image_id'];
 
 
 /* Tabs */
@@ -27,19 +27,19 @@ $tabsheet->assign();
 
 
 /* Initialisation */
-$query = '
-SELECT *
-  FROM '.IMAGES_TABLE.'
-  WHERE id = '.$_GET['image_id'].'
-;';
+$query = 'SELECT * FROM ' . IMAGES_TABLE . ' WHERE id = ' . $_GET['image_id'] . ';';
 $picture = pwg_db_fetch_assoc(pwg_query($query));
 
 
 # DO SOME STUFF HERE... or not !
-
+if(isset($_POST['detect_faces']))
+{
+  unset($_POST['detect_faces'])
+}
 
 /* Template */
 $template->assign(array(
+  'DEBUG_MSG' => '(this is a test)',
   'F_ACTION' => $self_url,
   'faceDetector' => $conf['faceDetector'],
   'TITLE' => render_element_name($picture),

@@ -6,15 +6,15 @@
 <form action="{$F_ACTION}" method="post" id="catModify">
   <fieldset>
     <legend>{'Detect faces within this photo.'|translate}</legend>
-
     <p>
+      <div align="center">{$DEBUG_MSG}</div>
       <div align="center"> 
         <img src="{$SRC_IMG}" alt="{'Image Source'|translate}">
       </div>
     </p>
 
     <p>
-      <input class="submit" type="submit" value="{'Save'|translate}" name="save_faceDetector">
+      <input class="submit" type="submit" value="{'Detect Faces'|translate}" name="save_faceDetector">
     </p>
   </fieldset>
 </form>
