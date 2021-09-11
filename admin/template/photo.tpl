@@ -43,14 +43,6 @@
             "body": [{
               "type": "TextualBody",
               "value": "It's Hallstatt in Upper Austria"
-            }, {
-              "type": "TextualBody",
-              "purpose": "tagging",
-              "value": "Hallstatt"
-            }, {
-              "type": "TextualBody",
-              "purpose": "tagging",
-              "value": "Upper Austria"
             }],
             "target": {
               "selector": {
