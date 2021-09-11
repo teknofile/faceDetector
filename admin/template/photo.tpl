@@ -68,7 +68,7 @@
               allowEmpty: true
             });
 
-            Annotorious.Toolbar(anno, document.getElementById('toolbnar'));
+            Annotorious.Toolbar(anno, document.getElementById('toolbar'));
             anno.addAnnotation(sampleAnnotation);
           }
         </script>
