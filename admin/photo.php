@@ -31,15 +31,17 @@ $query = 'SELECT * FROM ' . IMAGES_TABLE . ' WHERE id = ' . $_GET['image_id'] . 
 $picture = pwg_db_fetch_assoc(pwg_query($query));
 
 
+$foobar = "";
+
 # DO SOME STUFF HERE... or not !
 if(isset($_POST['detect_faces']))
 {
-  unset($_POST['detect_faces']);
+  $foobar = shell_exec('face_detection ' . $picture['path']);
 }
 
 /* Template */
 $template->assign(array(
-  'DEBUG_MSG' => '(this is a test)',
+  'DEBUG_MSG' => $foobar,
   'F_ACTION' => $self_url,
   'faceDetector' => $conf['faceDetector'],
   'TITLE' => render_element_name($picture),
